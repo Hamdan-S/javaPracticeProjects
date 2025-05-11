@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+
+    static void addNumbers(int new_a_values, int new_b_values){
+        System.out.println(new_a_values + new_b_values);
+    }
+
+    public static void main(String[] args) {
+        Scanner nums_input = new Scanner(System.in);
+        String a_values  = nums_input.nextLine();
+        String b_values = nums_input.nextLine();
+        int new_a_values = Integer.parseInt(a_values);
+        int new_b_values = Integer.parseInt(b_values);
+        addNumbers(new_a_values, new_b_values);
+    }
+}
