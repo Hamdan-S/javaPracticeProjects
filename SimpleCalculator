@@ -12,6 +12,11 @@ public class Main {
         String b_values = nums_input.nextLine();
         int new_a_values = Integer.parseInt(a_values);
         int new_b_values = Integer.parseInt(b_values);
-        addNumbers(new_a_values, new_b_values);
+        String typeOfoperation = nums_input.nextLine();
+        if (typeOfoperation.equals("+")) {
+            addNumbers(new_a_values, new_b_values);
+        } else{
+            System.out.println("Woah, looks like we ran into an error because Java can't handle shit");
+        }
     }
 }
