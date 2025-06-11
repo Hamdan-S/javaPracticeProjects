@@ -6,6 +6,18 @@ public class Main {
         System.out.println(new_a_values + new_b_values);
     }
 
+    static void subtractNumbers(int new_a_values, int new_b_values){
+        System.out.println(new_a_values - new_b_values);
+    }
+
+    static void MultiplyNumbers(int new_a_values, int new_b_values){
+        System.out.println(new_a_values * new_b_values);
+    }
+
+    static void divideNumbers(int new_a_values, int new_b_values){
+        System.out.println(new_a_values / new_b_values);
+    }
+
     public static void main(String[] args) {
         Scanner nums_input = new Scanner(System.in);
         String a_values  = nums_input.nextLine();
@@ -15,8 +27,14 @@ public class Main {
         String typeOfoperation = nums_input.nextLine();
         if (typeOfoperation.equals("+")) {
             addNumbers(new_a_values, new_b_values);
-        } else{
-            System.out.println("Woah, looks like we ran into an error because Java can't handle shit");
+        } else if(typeOfoperation.equals("-")){
+            subtractNumbers(new_a_values, new_b_values);
+        } else if(typeOfoperation.equals("*")){
+            MultiplyNumbers(new_a_values, new_b_values);
+        }else if(typeOfoperation.equals("/")){
+            divideNumbers(new_a_values, new_b_values);
+        }else {
+            System.out.println("Woah, looks like we ran into an error, please try again!");
+        }
         }
     }
-}
